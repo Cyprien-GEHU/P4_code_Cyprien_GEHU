@@ -530,13 +530,17 @@ button {
     opacity: 1;
 }
 
+.img-responsive{
+    width: 100%;
+}
+
 a[data-lightbox] {
     position: relative;
     display: block;
     text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before, a[data-lightbox]:focus::before {
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
@@ -554,7 +558,7 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img, a[data-lightbox]:focus img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -702,6 +706,8 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 h2 {
@@ -771,7 +777,7 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #5F3726;
 }
 
 .tc-white {
@@ -779,12 +785,12 @@ h4 {
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #5F3726;
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+.btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
+    box-shadow: 0 0 2px 2px #c27956 ;
     color: #FFFFFF!important;
 }
 
@@ -792,7 +798,7 @@ h4 {
     color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
+.ltc-white:hover, .ltc-white:focus {
     color: #cccccc!important;
 }
 
